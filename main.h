@@ -4,8 +4,8 @@
 #include <STC89C5xRC.H>
 #include "type.h"
 
-sbit LED0 = P3^7;
-sbit LED1 = P4^0;
+sbit LED0 = P3 ^ 7;
+sbit LED1 = P4 ^ 0;
 
 #include "usart.h"
 

@@ -6,9 +6,9 @@
 #include "type.h"
 
 //I2C管脚定义
-sbit OLED_SCL = P0^0;   //D0（SCLK） 时钟
-sbit OLED_SDIN = P0^1;  //D1（MOSI） 数据
- 
+sbit OLED_SCL = P0 ^ 0; //D0（SCLK） 时钟
+sbit OLED_SDIN = P0 ^ 1; //D1（MOSI） 数据
+
 #define OLED_SCLK_Clr() OLED_SCL  = 0
 #define OLED_SCLK_Set() OLED_SCL  = 1
 #define OLED_SDIN_Clr() OLED_SDIN = 0
@@ -17,14 +17,16 @@ sbit OLED_SDIN = P0^1;  //D1（MOSI） 数据
 #define Max_Column	128
 #define Max_Row		  64
 
-typedef enum {
-  OLED_CMD = 0,
-  OLED_DATA
+typedef enum
+{
+    OLED_CMD = 0,
+    OLED_DATA
 } OLED_MODE;
 
-typedef enum {
-  S6x8 = 0,
-  S8x16
+typedef enum
+{
+    S6x8 = 0,
+    S8x16
 } CHAR_SIZE;
 
 void OLED_Clear(void);
